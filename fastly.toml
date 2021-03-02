@@ -1,0 +1,6 @@
+version = 8
+name = "Tasty Fruits"
+description = "Woah so many fruits!"
+authors = ["william.overton@dunelm.com"]
+language = "assemblyscript"
+service_id = "7O9w2X2RHyXRcljHbMfeNG"
