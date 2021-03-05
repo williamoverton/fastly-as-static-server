@@ -2,7 +2,7 @@ import { Request, Response, Fastly, Headers } from "@fastly/as-compute";
 import "wasi";
 import { Console, Environ, FileSystem } from "as-wasi";
 
-import {Page} from "./static/index.html";
+import {Page} from "./fileServer/serve";
 
 function main(req: Request): Response {
 

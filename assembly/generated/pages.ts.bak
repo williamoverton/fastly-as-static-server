@@ -1,0 +1,14 @@
+import { PageContent } from "../fileServer/PageContent";
+
+export const pages: Array<PageContent> = [
+    new PageContent(
+        ["/", "/index.html"],
+        "PGgxPkF5eXl5PC9oMT5cbjxiPkkgYW0gaHRtbDwvYj4K",
+        "text/html"
+    ),
+    new PageContent(
+        ["/test"],
+        "QmVhbnMK",
+        "text/html"
+    )
+]

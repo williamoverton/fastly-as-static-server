@@ -15,16 +15,24 @@
   },
   "homepage": "https://github.com/fastly/compute-starter-kit-assemblyscript-default#readme",
   "devDependencies": {
+    "@types/mime-types": "^2.1.0",
+    "@types/node": "^14.14.31",
     "assemblyscript": "^0.14.11"
   },
   "dependencies": {
     "@fastly/as-compute": "^0.1.1",
     "as-base64": "^0.1.1",
-    "as-wasi": "^0.4.4"
+    "as-wasi": "^0.4.4",
+    "mime-types": "^2.1.29",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.2"
   },
   "scripts": {
     "asbuild:untouched": "asc assembly/index.ts --target debug",
     "asbuild:optimized": "asc assembly/index.ts --target release",
-    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "build-routing": "ts-node build/generateRouting.ts",
+    "build-app": "cd app/; npm run build; cd ../;",
+    "fullbuild": "cd app/; npm run build; cd ../; ts-node build/generateRouting.ts; fastly compute build; fastly compute deploy"
   }
 }
